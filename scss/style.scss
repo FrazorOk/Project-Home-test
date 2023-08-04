@@ -1,0 +1,130 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+@import '_nullstyle.scss';
+@import '_constants.scss';
+@import '_fonts.scss';
+
+@import '_header.scss';
+@import '_hi.scss';
+@import '_about.scss';
+@import '_tasks.scss';
+@import '_projects.scss';
+@import '_contacts.scss';
+@import '_footer.scss';
+
+.wrapper {
+	font-family: TT Hoves;
+	color: var(--gray-1, #333);
+
+	width: 100%;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+[class*='__container'] {
+	max-width: $widthContainer;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.page {
+	flex: 1 1 auto;
+	padding-top: $headerMinHeight;
+}
+
+.container {
+	max-width: $widthContainer;
+	margin: 0 auto;
+}
+
+h2 {
+	color: var(--gray-4, #bdbdbd);
+	font-family: TT Hoves;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 64px; /* 100% */
+}
+
+.white-btn {
+	width: fit-content;
+	min-width: 222px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+
+	padding: 30px 50px;
+
+	background: #fff;
+
+	transition: all 0.3s ease 0s;
+
+	span {
+		color: var(--gray-1, #333);
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 12px; /* 100% */
+		letter-spacing: 2.4px;
+		text-transform: uppercase;
+	}
+
+	img {
+		object-fit: contain;
+		object-position: center;
+		transform: rotate(180deg);
+	}
+}
+.white-btn:hover {
+	background-color: #c0c0c0;
+}
+
+.black-btn {
+	width: fit-content;
+	padding: 30px 40px;
+
+	transition: all 0.3s ease 0s;
+
+	background: var(--gray-1, #333);
+
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	span {
+		color: #fff;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 12px; /* 100% */
+		letter-spacing: 2.4px;
+		text-transform: uppercase;
+	}
+
+	img {
+		object-fit: contain;
+		object-position: center;
+	}
+}
+.black-btn:hover {
+	background-color: #595959;
+}
+
+@media (max-width: 1090px) {
+	h2 {
+		font-size: 52px;
+	}
+}
+@media (max-width: 768px) {
+	h2 {
+		font-size: 36px;
+		line-height: 38px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

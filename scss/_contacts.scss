@@ -1,0 +1,183 @@
+.contacts {
+	width: 100%;
+	margin-top: 120px;
+
+	&__row {
+		width: 100%;
+		margin-top: 30px;
+
+		display: flex;
+		align-items: start;
+		gap: 30px;
+	}
+
+	form {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: 0.56px;
+
+		max-width: 391px;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		input {
+			color: #333;
+			width: 100%;
+			background: #f3f3f3;
+
+			padding: 15px 20px;
+		}
+
+		input::placeholder {
+			color: #8d8d8d;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.56px;
+		}
+
+		textarea {
+			color: #333;
+			width: 100%;
+			height: 147px;
+			background: #f3f3f3;
+			padding: 15px 20px;
+
+			resize: none;
+		}
+
+		textarea::placeholder {
+			color: #8d8d8d;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.56px;
+		}
+	}
+
+	&__checkbox {
+		margin-top: 21px;
+
+		.container {
+			display: block;
+			position: relative;
+			padding-left: 35px;
+			cursor: pointer;
+
+			color: #333;
+			font-family: TT Hoves;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.42px;
+
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		/* Hide the browser's default checkbox */
+		.container input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;
+			background-color: #f3f3f3;
+		}
+
+		/* On mouse-over, add a grey background color */
+		.container:hover input ~ .checkmark {
+			background-color: #ccc;
+		}
+
+		.checkmark:after {
+			content: '';
+			position: absolute;
+			display: none;
+		}
+
+		/* Show the checkmark when checked */
+		.container input:checked ~ .checkmark:after {
+			display: block;
+		}
+
+		/* Style the checkmark/indicator */
+		.container .checkmark:after {
+			left: 9px;
+			top: 5px;
+			width: 6px;
+			height: 14px;
+			border: solid #333;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+
+	&__img {
+		max-width: 749px;
+
+		img {
+			object-fit: contain;
+			object-position: center;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.black-btn {
+		margin-top: 21px;
+	}
+}
+
+._noValid {
+	box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 0.91);
+}
+
+.warning-form {
+	color: red;
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+@media (max-width: 768px) {
+	.contacts {
+		margin-top: 40px;
+
+		&__row {
+			flex-direction: column-reverse;
+			align-items: center;
+			margin-top: 25px;
+		}
+		&__img {
+			max-width: 450px;
+		}
+		.black-btn {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
